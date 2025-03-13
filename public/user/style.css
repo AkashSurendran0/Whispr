@@ -2,9 +2,6 @@
 
 *{
     margin: 0%;
-}
-
-body {
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -15,6 +12,8 @@ body {
     border-radius: 50%;
     filter: blur(15px);
     opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
 }
 
 #ball1 {
@@ -151,7 +150,6 @@ body {
     background-color: black;
     display: flex;
     overflow: hidden;
-    flex-direction: column;
 }
 
 .brand{
@@ -162,8 +160,9 @@ body {
 }
 
 .brand img{
-    height: 110%;
+    width: 50%;
     z-index: 1000;
+    margin-bottom: 40px;
 }
 
 .getStarted{
@@ -172,13 +171,18 @@ body {
     border-radius: 30px;
     border: 1px solid white;
     background: none;
-    color: white;
-    font-size: 20px;
+     font-size: 20px;
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.getStarted a{
+    text-decoration: none;
+    color: white;
 }
 
 .getStarted:hover{
@@ -186,5 +190,37 @@ body {
     height: 100px;
     font-size: 25px;
     background-color: orange;
+}
+
+.middle{
+    margin: auto;
+    display: flex;
+    z-index: 10;
+}
+
+.desc{
+    width: 50%;
+    margin-right: 50px;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;   
     color: white;
+    gap: 15px;
+    text-align: right;
+    line-height: 1.8;
+}
+
+.login{
+    width: 50%;
+    display: flex;
+    flex-direction: column;   
+    color: white;
+}
+
+.desc img{
+    width: 30%;
+}
+
+.loginHeading{
+    font-size: 50px;
 }

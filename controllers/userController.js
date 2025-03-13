@@ -8,6 +8,15 @@ const landingPage = async (req,res)=>{
     }
 }
 
+const login = async (req,res)=>{
+    try {
+        res.render('login')
+    } catch (error) {
+        res.send('error')
+    }
+}
+
 module.exports={
-    landingPage
+    landingPage,
+    login
 }
