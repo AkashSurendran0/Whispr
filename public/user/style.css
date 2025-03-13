@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0%;
+}
+
+body {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.neon-ball {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(15px);
+    opacity: 0.8;
+}
+
+#ball1 {
+    width: 220px;
+    height: 220px;
+    background-color: #00ffff;
+    box-shadow: 0 0 30px #00ffff;
+    animation: ball1-move 20s infinite linear;
+}
+
+#ball2 {
+    width: 180px;
+    height: 180px;
+    background-color: #ff00ff;
+    box-shadow: 0 0 30px #ff00ff;
+    animation: ball2-move 25s infinite linear;
+}
+
+#ball3 {
+    width: 80px;
+    height: 80px;
+    background-color: #0099ff;
+    box-shadow: 0 0 30px #0099ff;
+    animation: ball3-move 22s infinite linear;
+}
+
+#ball4 {
+    width: 110px;
+    height: 110px;
+    background-color: #33ff99;
+    box-shadow: 0 0 30px #33ff99;
+    animation: ball4-move 28s infinite linear;
+}
+
+/* Complex ball movement animations */
+@keyframes ball1-move {
+    0% { 
+        top: 10%; 
+        left: 10%;
+    }
+    25% { 
+        top: 20%; 
+        left: 80%;
+    }
+    50% { 
+        top: 70%; 
+        left: 75%;
+    }
+    75% { 
+        top: 80%; 
+        left: 20%;
+    }
+    100% { 
+        top: 10%; 
+        left: 10%;
+    }
+}
+
+@keyframes ball2-move {
+    0% { 
+        top: 80%; 
+        left: 10%;
+    }
+    25% { 
+        top: 15%; 
+        left: 30%;
+    }
+    50% { 
+        top: 40%; 
+        left: 70%;
+    }
+    75% { 
+        top: 65%; 
+        left: 50%;
+    }
+    100% { 
+        top: 80%; 
+        left: 10%;
+    }
+}
+
+@keyframes ball3-move {
+    0% { 
+        top: 40%; 
+        left: 30%;
+    }
+    33% { 
+        top: 70%; 
+        left: 70%;
+    }
+    66% { 
+        top: 20%; 
+        left: 60%;
+    }
+    100% { 
+        top: 40%; 
+        left: 30%;
+    }
+}
+
+@keyframes ball4-move {
+    0% { 
+        top: 60%; 
+        left: 20%;
+    }
+    20% { 
+        top: 30%; 
+        left: 10%;
+    }
+    40% { 
+        top: 10%; 
+        left: 50%;
+    }
+    60% { 
+        top: 50%; 
+        left: 80%;
+    }
+    80% { 
+        top: 80%; 
+        left: 50%;
+    }
+    100% { 
+        top: 60%; 
+        left: 20%;
+    }
+}
+
+.landingBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.brand{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand img{
+    height: 110%;
+    z-index: 1000;
+}
+
+.getStarted{
+    width: 200px;
+    height: 80px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.getStarted:hover{
+    width: 220px;
+    height: 100px;
+    font-size: 25px;
+    background-color: orange;
+    color: white;
+}
