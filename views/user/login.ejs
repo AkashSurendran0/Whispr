@@ -13,7 +13,7 @@
         <div class="login">
             <p class="loginHeading">Login</p>
             <div class="loginForm" id="existingUser">
-                <form action="">
+                <form id="loginForm" action="">
                     <div class="wrapper">
                         <input type="email" class="inputField" name="email">
                         <label for="email">Enter Email:</label>
@@ -23,8 +23,8 @@
                         <label for="password">Enter password:</label>   
                     </div>
                     <div class="links">
-                        <a href="">Forgot Password?</a>
-                        <a href="">New User?</a>
+                        <p id="forgotPasswordLink">Forgot Password?</p>
+                        <p id="newUserLink">New User?</p>
                     </div>
                     <button class="googleSignIn">Sign In With Google<i class="bi bi-google googleLogo"></i></button>
                     <input type="submit" value="Login" class="submitForm">
@@ -42,6 +42,13 @@
                         <label for="email">Enter Email:</label>
                     </div>
                     <div class="wrapper">
+                        <div class="getOtp">
+                            <input type="text" class="inputField" name="email">
+                            <button>GET OTP</button>
+                            <label for="email">Enter OTP:</label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Enter password:</label>   
                     </div>
@@ -50,18 +57,21 @@
                         <label for="password">Confirm password:</label>   
                     </div>
                     <div class="links">
-                        <a href="">Already a User?</a>
+                        <p id="alreadyUserLink">Already a User?</p>
                     </div>
                     <button class="googleSignIn">Sign In With Google<i class="bi bi-google googleLogo"></i></button>
-                    <input type="submit" value="Login" class="submitForm">
+                    <input type="submit" value="Sign Up" class="submitForm">
                 </form>
             </div>
 
             <div class="loginForm" id="forgotPassword">
                 <form action="">
                     <div class="wrapper">
-                        <input type="text" class="inputField" name="email">
-                        <label for="email">Enter Email:</label>
+                        <div class="getOtp">
+                            <input type="text" class="inputField" name="email">
+                            <button>GET OTP</button>
+                            <label for="email">Enter OTP:</label>
+                        </div>
                     </div>
                     <div class="wrapper">
                         <input type="text" class="inputField" name="otp">
@@ -76,11 +86,9 @@
                         <label for="password">Confirm password:</label>   
                     </div>
                     <div class="links">
-                        <a href="">Forgot Password?</a>
-                        <a href="">New User?</a>
+                        <p id="loginFormLink">Back to Login?</p>
                     </div>
-                    <button class="googleSignIn">Sign In With Google<i class="bi bi-google googleLogo"></i></button>
-                    <input type="submit" value="Login" class="submitForm">
+                    <input type="submit" value="Change Password" class="submitForm">
                 </form>
             </div>
 

@@ -169,7 +169,7 @@
 
 .brand img{
     width: 50%;
-    z-index: 1000;
+    z-index: 10;
     margin-bottom: 40px;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -188,10 +188,6 @@
     transition: all 0.3s ease-in-out;
     z-index: 10;
     animation: fadeIn 1.5s ease-in-out;
-}
-
-.getStarted a{
-    text-decoration: none;
     color: white;
 }
 
@@ -313,17 +309,75 @@
     margin-bottom: 5px;
 }
 
-.links a{
-    text-decoration: none;
+.links p{
     color: white;
     transition: 0.3s ease-in-out;
 }
 
-.links a:hover{
+.links p:hover{
+    cursor: pointer;
     color: grey;    
 }
 
 #forgotPassword,
 #newUser{
     display: none;
+}
+
+#loading-screen{
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+#loading-screen img{
+    margin-bottom: 15px;
+    width: 20%;
+}
+
+.running-line {
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+    animation: moveLine 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+.getOtp{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.getOtp input{
+    width: 70%;
+}
+
+.getOtp button{
+    width: 30%;
+    background: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.getOtp button:hover{
+    font-size: 18px;
 }
