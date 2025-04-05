@@ -264,10 +264,15 @@
     color: white;
 }
 
-.wrapper input:focus~label{
+.wrapper input:focus~label,
+.wrapper input.filled~label{
     font-size: 0.9rem;  
     top: 10px;
     transform: translateY(-150%);
+}
+
+.occupied{
+
 }
 
 .submitForm{

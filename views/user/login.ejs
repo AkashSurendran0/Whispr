@@ -11,7 +11,7 @@
             <p>Whispr is a private messaging app where chats only happen when both users are online.<br> With a dark-themed design, it ensures secure and temporary conversations<br> without storing messages permanently.<br> Perfect for discreet chats, Whispr lets you communicate privately and in real time,<br> ensuring your messages stay confidential.</p>
         </div>
         <div class="login">
-            <p class="loginHeading">Login</p>
+            <p class="loginHeading" id="loginHeading">Login</p>
             <div class="loginForm" id="existingUser">
                 <form id="loginForm" action="">
                     <div class="wrapper">
@@ -32,21 +32,21 @@
             </div>
 
             <div class="loginForm" id="newUser">
-                <form action="">
+                <form id="signUpForm">
                     <div class="wrapper">
                         <input type="text" class="inputField" name="name">
                         <label for="email">Enter Name:</label>
                     </div>
                     <div class="wrapper">
-                        <input type="email" class="inputField" name="email">
-                        <label for="email">Enter Email:</label>
-                    </div>
-                    <div class="wrapper">
                         <div class="getOtp">
                             <input type="text" class="inputField" name="email">
                             <button>GET OTP</button>
-                            <label for="email">Enter OTP:</label>
+                            <label for="email">Enter Email:</label>
                         </div>
+                    </div>
+                    <div class="wrapper">
+                        <input type="email" class="inputField" name="email">
+                        <label for="email">Enter OTP:</label>
                     </div>
                     <div class="wrapper">
                         <input type="password" class="inputField" name="password">
@@ -70,7 +70,7 @@
                         <div class="getOtp">
                             <input type="text" class="inputField" name="email">
                             <button>GET OTP</button>
-                            <label for="email">Enter OTP:</label>
+                            <label for="email">Enter Email:</label>
                         </div>
                     </div>
                     <div class="wrapper">
