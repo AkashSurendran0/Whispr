@@ -239,7 +239,7 @@
 
 .wrapper{
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     border-bottom: 2px solid white;
     margin: 30px 0 20px 0;
@@ -256,6 +256,7 @@
 }
 
 .wrapper input{
+    width: 100%;
     background: none;
     border: none;
     padding: 0 10px;
@@ -269,10 +270,6 @@
     font-size: 0.9rem;  
     top: 10px;
     transform: translateY(-150%);
-}
-
-.occupied{
-
 }
 
 .submitForm{
@@ -365,13 +362,10 @@
 }
 
 .getOtp{
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 3px;
-}
-
-.getOtp input{
-    width: 70%;
 }
 
 .getOtp button{
@@ -384,5 +378,10 @@
 }
 
 .getOtp button:hover{
-    font-size: 18px;
+    color: rgb(173, 173, 173);
+}
+
+.inaccessible{
+    opacity: 50%;
+    pointer-events: none;
 }

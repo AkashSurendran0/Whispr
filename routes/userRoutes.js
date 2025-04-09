@@ -8,4 +8,7 @@ router.route('/')
 router.route('/login')
     .get(userRoutes.login)
 
+router.route('/sendOtp')
+    .post(userRoutes.sendOtp)
+
 module.exports=router

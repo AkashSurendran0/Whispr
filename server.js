@@ -14,6 +14,7 @@ app.use(session({
         maxAge: 86400000
     }
 }))
+app.use(express.json())
 app.use(nocache())
 app.set('view engine', 'ejs')
 app.set('views', [path.join(__dirname,'views/user')])

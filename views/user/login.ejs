@@ -37,25 +37,32 @@
                         <input type="text" class="inputField" name="name">
                         <label for="email">Enter Name:</label>
                     </div>
+                    <p id="nameError" class="text-danger loginErrMsg"></p>
                     <div class="wrapper">
                         <div class="getOtp">
-                            <input type="text" class="inputField" name="email">
-                            <button>GET OTP</button>
+                            <input type="email" id="newUserEmail" class="inputField" name="email">
+                            <button id="getOtpNewUser" onclick="sendOtp()">GET OTP</button>
                             <label for="email">Enter Email:</label>
                         </div>
                     </div>
-                    <div class="wrapper">
-                        <input type="email" class="inputField" name="email">
+                    <p id="emailError" class="text-danger loginErrMsg"></p>
+                    <p id="emailSuccess" class="text-success loginSuccessMsg"></p>
+                    <div class="wrapper inaccessible" id="newUserOtpField">
+                        <input type="text" id="newUserOTP" class="inputField" name="email">
+                        <div id="tick"></div>
                         <label for="email">Enter OTP:</label>
                     </div>
-                    <div class="wrapper">
+                    <p id="otpError" class="text-danger loginErrMsg"></p>
+                    <div class="wrapper inaccessible" id="newUserPassField">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Enter password:</label>   
                     </div>
-                    <div class="wrapper">
-                        <input type="password" class="inputField" name="password">
+                    <p id="passError" class="text-danger loginErrMsg"></p>
+                    <div class="wrapper inaccessible" id="newUserConfirmPassField">
+                        <input type="password" class="inputField" name="confirmPassword">
                         <label for="password">Confirm password:</label>   
                     </div>
+                    <p id="confirmPassError" class="text-danger loginErrMsg"></p>
                     <div class="links">
                         <p id="alreadyUserLink">Already a User?</p>
                     </div>
@@ -68,7 +75,7 @@
                 <form action="">
                     <div class="wrapper">
                         <div class="getOtp">
-                            <input type="text" class="inputField" name="email">
+                            <input type="email" id="forgotPassEmail" class="inputField" name="email">
                             <button>GET OTP</button>
                             <label for="email">Enter Email:</label>
                         </div>
@@ -77,11 +84,11 @@
                         <input type="text" class="inputField" name="otp">
                         <label for="password">Enter OTP:</label>   
                     </div>
-                    <div class="wrapper">
+                    <div class="wrapper inaccessible" id="forgotPassField">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Enter password:</label>   
                     </div>
-                    <div class="wrapper">
+                    <div class="wrapper inaccessible" id="forgotConfirmPassField">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Confirm password:</label>   
                     </div>
