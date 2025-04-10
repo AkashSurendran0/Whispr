@@ -146,12 +146,20 @@ signUpForm.addEventListener('submit', (event)=>{
     const email=formData.get('email')
     const pass=formData.get('password')
     const confirmPass=formData.get('confirmPassword')
-    const namePattern=/^[a-zA-Z]{3,}$/
+    const namePattern=/^[a-zA-Z ]{3,}$/
     if(!namePattern.test(name)){
         return nameError.innerText='Enter a valid name'
     }
     if(pass.trim().length<5){
         return passError.innerText='Password must contain minimum 5 letters'
     }
-    
+    if(!/^(?=.*[A-Z]).+$/.test(pass)){
+        return passError.innerText='Must contain atleast one uppercase letter'
+    }
+    if(!/^(?=.*[0-9]).+$/.test(pass)){
+        return passError.innerText='Must contain atleast one number'
+    }
+    if(confirmPass!==pass){
+        return confirmPassError.innerText='Passwords doesnt match'
+    }
 })
