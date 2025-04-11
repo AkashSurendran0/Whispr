@@ -13,15 +13,17 @@
         <div class="login">
             <p class="loginHeading" id="loginHeading">Login</p>
             <div class="loginForm" id="existingUser">
-                <form id="loginForm" action="">
+                <form id="loginForm">
                     <div class="wrapper">
                         <input type="email" class="inputField" name="email">
                         <label for="email">Enter Email:</label>
                     </div>
+                    <p id="emailError" class="text-danger loginErrMsg"></p>
                     <div class="wrapper">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Enter password:</label>   
                     </div>
+                    <p id="passError" class="text-danger loginErrMsg"></p>
                     <div class="links">
                         <p id="forgotPasswordLink">Forgot Password?</p>
                         <p id="newUserLink">New User?</p>
@@ -41,11 +43,11 @@
                     <div class="wrapper">
                         <div class="getOtp">
                             <input type="email" id="newUserEmail" class="inputField" name="email">
-                            <button id="getOtpNewUser" onclick="sendOtp()">GET OTP</button>
+                            <button type="button" id="getOtpNewUser" onclick="sendOtp()">GET OTP</button>
                             <label for="email">Enter Email:</label>
                         </div>
                     </div>
-                    <p id="emailError" class="text-danger loginErrMsg"></p>
+                    <p id="signUpEmailError" class="text-danger loginErrMsg"></p>
                     <p id="emailSuccess" class="text-success loginSuccessMsg"></p>
                     <div class="wrapper inaccessible" id="newUserOtpField">
                         <input type="text" id="newUserOTP" class="inputField" name="email">
@@ -71,27 +73,32 @@
                 </form>
             </div>
 
-            <div class="loginForm" id="forgotPassword">
-                <form action="">
+            <div class="loginForm" id="forgotPasswordForm">
+                <form id="forgotPassword">
                     <div class="wrapper">
                         <div class="getOtp">
                             <input type="email" id="forgotPassEmail" class="inputField" name="email">
-                            <button>GET OTP</button>
+                            <button type="button" id="forgotPassOtp" onclick="sendForgotOtp()">GET OTP</button>
                             <label for="email">Enter Email:</label>
                         </div>
                     </div>
-                    <div class="wrapper">
+                    <p id="forgotEmailError" class="text-danger loginErrMsg"></p>
+                    <p id="forgotEmailSuccess" class="text-success loginSuccessMsg"></p>
+                    <div class="wrapper inaccessible" id="forgotOtpField">
                         <input type="text" class="inputField" name="otp">
+                        <div id="forgotTick"></div>
                         <label for="password">Enter OTP:</label>   
                     </div>
                     <div class="wrapper inaccessible" id="forgotPassField">
                         <input type="password" class="inputField" name="password">
                         <label for="password">Enter password:</label>   
                     </div>
+                    <p id="passError" class="text-danger loginErrMsg"></p>
                     <div class="wrapper inaccessible" id="forgotConfirmPassField">
-                        <input type="password" class="inputField" name="password">
+                        <input type="password" class="inputField" name="confirmPassword">
                         <label for="password">Confirm password:</label>   
                     </div>
+                    <p id="confirmPassError" class="text-danger loginErrMsg"></p>
                     <div class="links">
                         <p id="loginFormLink">Back to Login?</p>
                     </div>

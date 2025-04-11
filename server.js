@@ -2,10 +2,12 @@ const express=require('express')
 const path=require('path')
 const userRoutes=require('./routes/userRoutes')
 const session=require('express-session')
-const app=express()
 const env=require('dotenv').config()
 const nocache=require('nocache')
+const db=require('./config/db')
 
+const app=express()
+db()
 app.use(session({
     secret:'Batman',
     saveUninitialized:false,
