@@ -84,14 +84,6 @@ const signInUser = async (req,res)=>{
     }
 }
 
-const loadChat = async (req,res) =>{
-    try {
-        res.send('hiii')
-    } catch (error) {
-        console.log(error)
-    }
-}
-
 const sendForgotOtp = async (req,res)=>{
     try {
         const {email}=req.body
@@ -131,7 +123,6 @@ module.exports={
     sendOtp,
     signUpUser,
     signInUser,
-    loadChat,
     sendForgotOtp,
     changePassword
 }

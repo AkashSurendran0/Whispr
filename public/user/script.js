@@ -60,6 +60,9 @@ function clearLoginMsg(){
 
 const sendOtp = () =>{
     clearLoginMsg()
+    const btn=document.getElementById('getOtpNewUser')
+    btn.disabled=true
+    btn.innerHTML='<div class="loader"></div>'
     let email=document.getElementById('newUserEmail').value
 
     fetch('/sendOtp', {
@@ -72,8 +75,7 @@ const sendOtp = () =>{
     .then(response=>response.json())
     .then(data=>{
         if(data.success){
-            const btn=document.getElementById('getOtpNewUser')
-            btn.disabled=true
+            btn.innerHTML=''
             let timer=60
             const interval=setInterval(() => {
                 timer--
@@ -118,6 +120,9 @@ const sendOtp = () =>{
                 }
             })
         }else{
+            btn.disabled=false
+            btn.innerHTML=''
+            btn.innerText='Get OTP'
             const emailError=document.getElementById('signUpEmailError')
             emailError.innerText=data.message
         }
@@ -225,6 +230,10 @@ loginForm.addEventListener('submit', (event)=>{
 
 const sendForgotOtp = async () =>{
     clearLoginMsg()
+    const btn=document.getElementById('forgotPassOtp')
+    btn.disabled=true
+    btn.innerHTML='<div class="loader"></div>'
+
     const email=document.getElementById('forgotPassEmail').value
     const emailErr=document.getElementById('forgotEmailError')
     if(email.trim()=='') return emailErr.innerText='Email required'
@@ -241,8 +250,7 @@ const sendForgotOtp = async () =>{
     .then(response=>response.json())
     .then(data=>{
         if(data.success){
-            const btn=document.getElementById('forgotPassOtp')
-            btn.disabled=true
+            btn.innerHTML=''
             let timer=60
             const interval=setInterval(() => {
                 timer--
@@ -287,6 +295,9 @@ const sendForgotOtp = async () =>{
                 }
             })
         }else{
+            btn.disabled=false
+            btn.innerHTML=''
+            btn.innerText='Get OTP'
             emailErr.innerText=data.message
         }
     })

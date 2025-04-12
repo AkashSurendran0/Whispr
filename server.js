@@ -22,6 +22,7 @@ app.set('view engine', 'ejs')
 app.set('views', [path.join(__dirname,'views/user')])
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.static(path.join(__dirname,'public/user')))
+app.use(express.static(path.join(__dirname,'public/uploads')))
 
 app.use('/', userRoutes)
 
